@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 dark:bg-slate-900" >
+
+    <!-- PAGE TITLE -->
+    <h1 class="text-xs ml-4 mt-3 text-gray-700 dark:text-gray-400">OVERVIEW</h1>
+    <h1 class="text-4xl ml-4 mt-0 font-bold dark:text-white">Search</h1>
+
+   <!--FOOTER NAVIGATION BAR-->
+<body class="bg-slate-100 dark:bg-slate-900 content-center ">
+    <div class="w-full h-screen">
+        <!-- <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> // if shown only tablet/mobile-->
+        <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 shadow-3xl">
+            <div id="tabs" class="flex justify-between backdrop-filter backdrop-blur-xl ">
+                <a href="index-components.html" class="w-full text-gray-700 dark:text-gray-400 focus:text-yellow-500 hover:text-yellow-500 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="extension-puzzle"></ion-icon>
+                    <span class="tab tab-explore block text-xs">Wigets</span>
+                </a>
+                <a href="#" class="w-full text-gray-700 dark:text-gray-400 focus:text-blue-500 hover:text-blue-500 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="book"></ion-icon>
+                    <span class="tab tab-kategori block text-xs">Pages</span>
+                </a>
+                <a href="index.html" class="w-full text-gray-700 dark:text-gray-400 focus:text-blue-500 hover:text-blue-500 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="home"></ion-icon>
+                    <span class=" block text-xs">Home</span>
+                </a>
+                <a href="#" class="w-full text-gray-700 dark:text-gray-400 focus:text-blue-500 hover:text-blue-500 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="contrast-sharp"></ion-icon>
+                    <span class=" block text-xs">Theme</span>
+                </a>
+                <a href="index-search.html" class="w-full text-gray-700 dark:text-gray-400 focus:text-blue-500 hover:text-blue-500 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="search"></ion-icon>
+                    <span class="tab tab-account block text-xs">Search</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SEARCH BAR --> 
+
+<form class="flex items-center mx-4 my-5">   
+    <label for="simple-search" class="sr-only">Search</label>
+    <div class="relative w-full">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        </div>
+        <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-slate-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+    </div>
+
+</form>
+
+        <div class=" overflow-hidden bg-slate-200 rounded-xl shadow-lg dark:bg-slate-800 dark:border-gray-700 mr-4 ml-4 mt-5">
+            <div class="p-5">
+                <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Actual</h5>
+                <a href="#" class="text-blue-500">google.com</a>
+                <hr class="mt-2">
+                <a href="#" class="text-blue-500">youtube</a>
+                <hr class="mt-2">
+                <a href="#" class="text-blue-500">apple.com</a>
+                <hr class="mt-2">
+                <a href="#" class="text-blue-500">how to...</a>
+                <hr class="mt-2">
+            </div>
+        </div>
+
+        <img src="https://img.freepik.com/free-vector/businessmans-hand-holding-question-mark-person-asking-answer-help-support-flat-vector-illustration-faq-interrogation-difficulty-concept-banner-website-design-landing-web-page_74855-24358.jpg?w=740&t=st=1678473608~exp=1678474208~hmac=bc40f3f9fd9c3381f2a312ba5cf72273973439f36fa1621d9c7b1a56210e9a64" alt="" class="rounded-xl shadow-lg mx-4 my-5 w-full ">
+
+
+        
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
