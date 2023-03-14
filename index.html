@@ -30,7 +30,8 @@
                 <ion-icon name="home"></ion-icon>
                 <span class=" block text-xs">Home</span>
             </a>
-            <a href="#" class="w-full text-gray-700 dark:text-gray-400 focus:text-blue-500 hover:text-blue-500 justify-center inline-block text-center pt-2 pb-1">
+            <a href="#themeSettings" data-modal-target="themeSettings" data-modal-toggle="themeSettings"
+            class="w-full text-gray-700 dark:text-gray-400 focus:text-blue-500 hover:text-blue-500 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="contrast-sharp"></ion-icon>
                 <span class=" block text-xs">Theme</span>
             </a>
@@ -41,13 +42,20 @@
         </div>
     </section>
 
+    <div id="theme" class="fixed top-0 right-0 bottom-0 left-0
+     opacity-0 pointer-events-none m-0 p-0">
+    
+    </div>
+
     <!--PAGE TITLE-->
     <h1 class="text-xs ml-4 mt-3 font-bold text-gray-700 dark:text-gray-400">OVERVIEW</h1>
     <h1 class="text-4xl ml-4 mt-0 font-bold dark:text-white ">Home</h1>
 
     <!--CARD#1-->
     <div class="rounded-xl overflow-hidden shadow-lg mr-4 ml-4 mt-5">
-        <img class="w-full" src="https://images.unsplash.com/photo-1677871117050-218ae53a723b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60" alt="Sunset in the mountains">
+        <video class="w-full" muted autoplay="autoplay" loop="loop"
+        src="images/infinite-card-bg.mp4"
+        alt="Sunset in the mountains"></video>
         <div class="px-6 py-4 bg-slate-200 dark:bg-slate-800 dark:border-gray-700">
             <h1 class="font-bold text-xl mb-2 dark:text-white">Card Title</h1>
             <p class="text-gray-700 text-base dark:text-gray-400">
@@ -88,23 +96,39 @@
         </div>
     </div>
 
-    <div id="default-carousel" class="" data-carousel="slide">
+
+    <!--CAROUSEL-->
+    <div id="default-carousel" class="inline-grid" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class=" h-56 overflow-hidden rounded-xl mx-4 my-5 z-10">
-            <div class="gap-8 relative ">
-                <img class="w-full rounded-xl insent-0 h-full object-cover opacity-50 shadow-lg" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" />
+        <div class=" mx-4 mt-5 grid">
+            <div class=" relative hidden duration-700 ease-in-out h-56" data-carousel-item>
+                <img class="w-full rounded-xl insent-0 h-full object-cover opacity-50 shadow-lg
+                "
+                 src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" />
+                    <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 mx-4 rounded-full absolute inset-x-0 bottom-2">
+                        View
+                    </button>
+            </div>
+        
+            <div class=" relative hidden duration-700 ease-in-out h-56" data-carousel-item>
+                <img class="w-full rounded-xl insent-0 h-full object-cover opacity-50 shadow-lg
+                " 
+                src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
                     <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 mx-4 rounded-full absolute inset-x-0 bottom-2">
                         View
                     </button>
                 </div>
-        
-                <div class="gap-8 relative ">
-                <img class="w-full rounded-xl insent-0 h-full object-cover opacity-50 shadow-lg" src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+
+            <div class=" relative hidden duration-700 ease-in-out h-56" data-carousel-item>
+                <img class="w-full rounded-xl insent-0 h-full object-cover opacity-50 shadow-lg
+                " 
+                src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2l0ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60" />
                     <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 mx-4 rounded-full absolute inset-x-0 bottom-2">
                         View
                     </button>
+                </div>
         </div>
-        </div>
+    </div>
 
 
     <!--FOOTER-->
