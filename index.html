@@ -16,7 +16,7 @@
     <!--Alpine Js V3-->
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class="bg-slate-100 dark:bg-slate-900" x-init="themeInit">
+<body class="bg-slate-100 dark:bg-slate-900" >
     <!--Page title-->
     <h1 class="text-xs ml-4 mt-3 font-bold text-gray-700 dark:text-gray-400">OVERVIEW</h1>
     <h1 class="text-4xl ml-4 mt-0 font-bold dark:text-white ">Home</h1>
@@ -104,7 +104,7 @@
           <span>modal</span>
       </button>
   
-      <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3 top-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+      <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
           <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
               <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
                   x-transition:enter="transition ease-out duration-300 transform"
