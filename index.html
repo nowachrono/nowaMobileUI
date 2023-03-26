@@ -10,9 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css"/>
+    <link rel="stylesheet" href="tailwind.css">
+    <!--Alpine Js V3-->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class="bg-slate-100 dark:bg-slate-900">
-
+<body class="bg-slate-100 dark:bg-slate-900" x-init="themeInit">
     <!--Page title-->
     <h1 class="text-xs ml-4 mt-3 font-bold text-gray-700 dark:text-gray-400">OVERVIEW</h1>
     <h1 class="text-4xl ml-4 mt-0 font-bold dark:text-white ">Home</h1>
@@ -53,7 +57,7 @@
                 </button>
             </div>
     </div>
-        
+
 
     <!--Card#2-->
     <div class="overflow-hidden bg-slate-200 rounded-xl shadow-lg dark:bg-slate-800 dark:border-gray-700 mx-4 my-5">
@@ -67,170 +71,9 @@
         </div>
     </div>
 
-    <!--Service card-->
-    <div class="mx-4">
-        <div class="bg-slate-800 p-6 rounded-xl shadow-lg">
-          <h2 class="text-4xl font-extrabold mb-2 text-white text-center border-b rounded-t dark:border-gray-600">Our Service</h2>
-          <div class="grid grid-cols-2">
-            <p class="text-gray-300 text-center font-bold text-2xl">
-                Speed
-                <svg width="100x" height="100px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="5.76" fill="#dfec7e" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.08913 13.2799H9.17913V20.4799C9.17913 22.1599 10.0891 22.4999 11.1991 21.2399L18.7691 12.6399C19.6991 11.5899 19.3091 10.7199 17.8991 10.7199H14.8091V3.5199C14.8091 1.8399 13.8991 1.4999 12.7891 2.7599L5.21913 11.3599C4.29913 12.4199 4.68913 13.2799 6.08913 13.2799Z" stroke="#4b5a6c" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-            </p>
-            <p class="text-gray-300 text-center font-bold text-2xl">
-                Quality
-                <svg width="100x" height="100px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="5.76" fill="#7ed0ec" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g opacity="0.4"> <path d="M9.61914 16L11.1191 17.5L14.3691 14.5" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8.80945 2L5.18945 5.63" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15.1895 2L18.8095 5.63" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> </g> <path d="M2 7.8501C2 6.0001 2.99 5.8501 4.22 5.8501H19.78C21.01 5.8501 22 6.0001 22 7.8501C22 10.0001 21.01 9.8501 19.78 9.8501H4.22C2.99 9.8501 2 10.0001 2 7.8501Z" stroke="#292D32" stroke-width="1.5"></path> <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
-            </p>
-            <p class="text-gray-300 text-center font-bold text-2xl">
-                Safefty
-                <svg width="100x" height="100px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="5.76" fill="#7eeca8" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.6103 2.21C12.2503 1.93 11.7503 1.93 11.3903 2.21C9.49032 3.66 3.88028 8.39 3.91028 13.9C3.91028 18.36 7.54031 22 12.0103 22C16.4803 22 20.1103 18.37 20.1103 13.91C20.1203 8.48 14.5003 3.67 12.6103 2.21Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"></path> <g opacity="0.4"> <path d="M12 2V22" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 18.9597L19.7 15.2197" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13.9599L19.37 10.3799" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 8.95976L17.03 6.50977" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-            <p class="text-gray-300 text-center font-bold text-2xl">
-                Simplify
-                <svg width="100x" height="100px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="5.76" fill="#f09e9e" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M22.9992 17.91C23.0192 18.66 22.8192 19.37 22.4592 19.98C22.2592 20.34 21.9892 20.6701 21.6892 20.9401C20.9992 21.5801 20.0892 21.9701 19.0792 22.0001C17.6192 22.0301 16.3292 21.2801 15.6192 20.1301C15.2392 19.5401 15.0092 18.8301 14.9992 18.0801C14.9692 16.8201 15.5292 15.6801 16.4292 14.9301C17.1092 14.3701 17.9692 14.0201 18.9092 14.0001C21.1192 13.9501 22.9492 15.7 22.9992 17.91Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.4395 18.0303L18.4495 18.9902L20.5395 16.9702" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <g opacity="0.4"> <path d="M3.16992 7.43994L11.9999 12.5499L20.7699 7.46991" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 21.61V12.54" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21.6106 9.17V14.83C21.6106 14.88 21.6106 14.92 21.6006 14.97C20.9006 14.36 20.0006 14 19.0006 14C18.0606 14 17.1906 14.33 16.5006 14.88C15.5806 15.61 15.0006 16.74 15.0006 18C15.0006 18.75 15.2106 19.46 15.5806 20.06C15.6706 20.22 15.7806 20.37 15.9006 20.51L14.0706 21.52C12.9306 22.16 11.0706 22.16 9.9306 21.52L4.59061 18.56C3.38061 17.89 2.39062 16.21 2.39062 14.83V9.17C2.39062 7.79 3.38061 6.11002 4.59061 5.44002L9.9306 2.48C11.0706 1.84 12.9306 1.84 14.0706 2.48L19.4106 5.44002C20.6206 6.11002 21.6106 7.79 21.6106 9.17Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-<!--Theme modal window-->
-
-    <!--Styles for theme modal-->
-    <style>
-		.animated {
-			-webkit-animation-duration: 1s;
-			animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-		}
-
-		.animated.faster {
-			-webkit-animation-duration: 500ms;
-			animation-duration: 500ms;
-		}
-
-		.fadeIn {
-			-webkit-animation-name: fadeIn;
-			animation-name: fadeIn;
-		}
-
-		.fadeOut {
-			-webkit-animation-name: fadeOut;
-			animation-name: fadeOut;
-		}
-
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-			}
-			to {
-				opacity: 1;
-			}
-		}
-
-		@keyframes fadeOut {
-			from {
-				opacity: 1;
-			}
-			to {
-				opacity: 0;
-			}
-		}
-	</style>
-
-    <!--Modal-->
-	<div class="bottom main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
-		style="background: rgba(0,0,0,.6);">
-		<div
-			class="border border-slate-700 modal-container bg-slate-200 dark:bg-slate-800 w-11/12 md:max-w-md mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
-			<div class="modal-content py-4 text-left px-6 bottom-4">
-				<!--Title-->
-				<div class="flex justify-between items-center pb-3">
-					<p class="text-2xl font-bold text-black dark:text-white">Theme</p>
-					<div class="modal-close cursor-pointer z-50">
-						<svg class="fill-current text-black dark:text-gray-600" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-							viewBox="0 0 18 18">
-							<path
-								d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-							</path>
-						</svg>
-					</div>
-				</div>
-
-
-                <style>
-
-                    input:checked ~ .dot {
-                    transform: translateX(100%);
-                    /* background-color: #132b50; */
-                    }
-                </style>
-                <div class="flex flex-row justify-between toggle">
-                    <label for="dark-toggle" class="flex items-center cursor-pointer">
-                        <div class="relative">
-                        <input type="checkbox" name="dark-mode" id="dark-toggle" class="checkbox hidden">
-                        <div class="block border-[1px] dark:border-white border-gray-900 w-14 h-8 rounded-full"></div>
-                        <div class="dot absolute left-1 top-1 dark:bg-white bg-gray-800 w-6 h-6 rounded-full transition"></div>
-                        </div>
-                        <div class="ml-3 dark:text-white text-gray-900 font-medium">
-                        Dark Mode
-                        </div>
-                    </label>
-                    </div>
-                </div>
-                <script>
-                tailwind.config = {
-                darkMode: 'class',
-                }
-                </script>
-                <script>
-                function darkModeListener() {
-                document.querySelector("html").classList.toggle("dark");
-                }
-                
-                document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
-                
-                </script>
-
-
-			</div>
-		</div>
-	</div>
-
-    <!--Script for modal window-->
-	<script>
-
-		const modal = document.querySelector('.main-modal');
-		const closeButton = document.querySelectorAll('.modal-close');
-
-		const modalClose = () => {
-			modal.classList.remove('fadeIn');
-			modal.classList.add('fadeOut');
-			setTimeout(() => {
-				modal.style.display = 'none';
-			}, 500);
-		}
-
-		const openModal = () => {
-			modal.classList.remove('fadeOut');
-			modal.classList.add('fadeIn');
-			modal.style.display = 'flex';
-		}
-
-		for (let i = 0; i < closeButton.length; i++) {
-			const elements = closeButton[i];
-			elements.onclick = (e) => modalClose();
-			modal.style.display = 'none';
-			window.onclick = function (event) {
-				if (event.target == modal) modalClose();
-			}
-		}
-	
-    </script>
-
-
 
     <!--Footer-->
-    <footer class="p-4 my-5 mx-4 rounded-xl shadow-lg bg-slate-100 dark:bg-slate-800">
+    <footer class="p-4 my-5 mx-4 rounded-xl shadow-lg bg-slate-200 dark:bg-slate-800">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">NotExistedCompany</a>. All Rights Reserved.
         </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
@@ -249,6 +92,58 @@
         </ul>
     </footer>
 
+
+<!--Modal-->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div id="themeModal">
+  <div x-data="{ modelOpen: false }">
+      <button @click="modelOpen =!modelOpen" class="flex items-center justify-center px-3 py-2 space-x-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-yellow-500 rounded-md">
+              <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+          </svg>
+  
+          <span>modal</span>
+      </button>
+  
+      <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3 top-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+          <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+              <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
+                  x-transition:enter="transition ease-out duration-300 transform"
+                  x-transition:enter-start="opacity-0" 
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition ease-in duration-200 transform"
+                  x-transition:leave-start="opacity-100" 
+                  x-transition:leave-end="opacity-0"
+                  class="fixed inset-0 transition-opacity bg-opacity-40 backdrop-blur-md" aria-hidden="true"
+              ></div>
+  
+              <div x-cloak x-show="modelOpen" 
+                  x-transition:enter="transition ease-out duration-300 transform"
+                  x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
+                  x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                  x-transition:leave="transition ease-in duration-200 transform"
+                  x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
+                  x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                  class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-slate-200 dark:bg-slate-800 rounded-xl shadow-lg"
+              >
+                    <div class="flex items-center justify-between space-x-4">
+                      <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
+                    
+                        <button @click="modelOpen = false" class="text-gray-600 focus:outline-none hover:text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div >
+                    
+                    </div>
+                    
+              </div>
+          </div>
+        </div>
+
+
     <!--Footer Navigation Bar-->
     <div class="w-full h-screen">
         <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 shadow rounded-xl mx-3 my-2 backdrop-blur-lg">
@@ -265,7 +160,7 @@
                     <ion-icon name="home"></ion-icon>
                     <span class="tab tab-home block text-xs">Home</span>
                 </a>
-                <a href="#" onclick="openModal()"
+                <a href="#" @click="modelOpen =!modelOpen"
                 class="w-full text-gray-700 dark:text-gray-100 focus:text-yellow-500 hover:text-yellow-500 justify-center inline-block text-center pt-2 pb-1">
                     <ion-icon name="contrast-sharp"></ion-icon>
                     <span class="tab tab-theme block text-xs">Theme</span>
@@ -281,9 +176,10 @@
 
 
 
-
+<script src="main.js"></script>
 <!--IONICONS-->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.bundle.js"></script>
 </body>
 </html>
