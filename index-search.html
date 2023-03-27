@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tailwind.css">
 </head>
-<body class="bg-slate-100 dark:bg-slate-900">
+<body class="bg-slate-100 dark:bg-neutral-900">
 
     <!-- PAGE TITLE -->
     <h1 class="text-xs ml-4 mt-3 font-bold text-gray-700 dark:text-gray-400">OVERVIEW</h1>
@@ -24,13 +24,13 @@
     <label for="simple-search" class="sr-only">Search</label>
     <div class="relative w-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+            <svg aria-hidden="true" class="w-5 h-5 text-neutral-500 dark:text-neutral-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
         </div>
-        <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full pl-10 p-2.5  dark:bg-slate-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Search" required>
+        <input type="text" id="simple-search" class="bg-slate-100 border border-neutral-400 text-gray-900 text-sm rounded-xl block w-full pl-10 p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-neutral-400 dark:text-white " placeholder="Search" required>
     </div>
 </form>
 
-        <div class=" overflow-hidden bg-slate-200 rounded-xl shadow-lg dark:bg-slate-800 dark:border-gray-700 mr-4 ml-4 mt-5">
+        <div class=" overflow-hidden bg-slate-200 rounded-xl shadow-lg dark:bg-neutral-800 dark:border-gray-700 mr-4 ml-4 mt-5">
             <div class="p-5">
                 <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Actual</h5>
                 <a href="#" class="text-blue-400">google.com</a>
@@ -44,34 +44,33 @@
             </div>
         </div>
 
-<!--Modal-->
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  <div x-data="{ modelOpen: false }">
-  
-      <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-          <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
-              <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
-                  x-transition:enter="transition ease-out duration-300 transform"
-                  x-transition:enter-start="opacity-0" 
-                  x-transition:enter-end="opacity-100"
-                  x-transition:leave="transition ease-in duration-200 transform"
-                  x-transition:leave-start="opacity-100" 
-                  x-transition:leave-end="opacity-0"
-                  class="fixed inset-0 transition-opacity bg-opacity-40 backdrop-blur-md" aria-hidden="true"
-              ></div>
-  
-              <div x-cloak x-show="modelOpen" 
-                  x-transition:enter="transition ease-out duration-300 transform"
-                  x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-                  x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                  x-transition:leave="transition ease-in duration-200 transform"
-                  x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
-                  x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                  class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-slate-200 dark:bg-slate-800 rounded-xl shadow-lg"
-              >
+    <!--Modal Window-->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div x-data="{ modelOpen: false }">
+        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0" 
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition ease-in duration-200 transform"
+                    x-transition:leave-start="opacity-100" 
+                    x-transition:leave-end="opacity-0"
+                    class="fixed inset-0 transition-opacity bg-opacity-40 backdrop-blur-md" aria-hidden="true">
+                </div>
+
+                <div x-cloak x-show="modelOpen" 
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
+                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave="transition ease-in duration-200 transform"
+                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
+                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    class="inline-block w-full max-w-xl p-8 my-32 overflow-hidden text-left transition-all transform bg-slate-200 dark:bg-neutral-800 rounded-xl shadow-lg"
+                >
                     <div class="flex items-center justify-between space-x-4">
-                      <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
-                    
+                        <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
+                        <!--Close Modal Window button-->
                         <button @click="modelOpen = false" class="text-gray-600 focus:outline-none hover:text-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -79,38 +78,35 @@
                         </button>
                     </div>
 
-                    <div >
+                </div>
                     
-                    </div>
-                    
-              </div>
-          </div>
+            </div>
         </div>
-
+    </div>
 
 <!--Footer Navigation Bar-->
 <div class="w-full h-screen">
     <!-- <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> // if shown only tablet/mobile-->
     <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 shadow rounded-xl mx-3 my-2 backdrop-blur-lg">
         <div id="tabs" class="flex justify-between">
-            <a href="index-components.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-yellow-500 hover:text-yellow-500 justify-center inline-block text-center pt-2 pb-1">
+            <a href="index-components.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="extension-puzzle"></ion-icon>
                 <span class="tab tab-explore block text-xs">Wigets</span>
             </a>
-            <a href="index-pages.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-yellow-500 hover:text-yellow-500 justify-center inline-block text-center pt-2 pb-1">
+            <a href="index-pages.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="book"></ion-icon>
                 <span class="tab tab-kategori block text-xs">Pages</span>
             </a>
-            <a href="index.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-yellow-500 hover:text-yellow-500 justify-center inline-block text-center pt-2 pb-1">
+            <a href="index.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="home"></ion-icon>
                 <span class="tab tab-explore block text-xs">Home</span>
             </a>
             <a href="#" @click="modelOpen =!modelOpen"
-            class="w-full text-gray-700 dark:text-gray-100 focus:text-yellow-500 hover:text-yellow-500 justify-center inline-block text-center pt-2 pb-1">
+            class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-500 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="contrast-sharp"></ion-icon>
                 <span class="tab tab-wishlist block text-xs">Theme</span>
             </a>
-            <a href="index-search.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-yellow-500 hover:text-yellow-500 justify-center inline-block text-center pt-2 pb-1">
+            <a href="index-search.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="search"></ion-icon>
                 <span class="tab tab-account block text-xs">Search</span>
             </a>
