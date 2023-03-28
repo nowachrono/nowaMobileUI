@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+  <!--Fot Tom Select-->
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
 </head>
 <body class="bg-white dark:bg-neutral-900">
   <!--Page title-->
@@ -20,25 +23,179 @@
   <div class="bg-white dark:bg-neutral-900 flex items-center justify-center py-6 mx-4 my-2">
     <div class="container">
 
-      <!--Basic Forms-->
+      <!--Search Forms-->
       <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
-        <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Basic Form</div>
+        <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Search Form</div>
 
-          <div class="w-full">
+            <!--Tom Select Form-->
+            <div class="p-0 bg-black">	<select id="select-tags" multiple data-placeholder="Best movies and TV shows" class="form-control">
+              <optgroup label="Name">
+                <option value="Lorem Ipsum" data-date="1">Position 1</option>
+                <option value="Some Text" data-date="2" selected>Position 2</option>
+              </optgroup>
+              <optgroup label="Positions A-F">
+                <option value="A-Position" data-date="1">Lorem Ipsum</option>
+                <option value="B-Position" data-date="2">Some Text</option>
+                <option value="C-Position" data-date="3">Lorem Ipsum</option>
+                <option value="D-Position" data-date="4">Some Text</option>
+                <option value="E-Position" data-date="5">Lorem Ipsum</option>
+                <option value="F-Position" data-date="6">Some Text</option>
+              </optgroup>
+            </select>
+            </div>
+
+            <script>
+              new TomSelect("#select-tags",{
+                plugins: ['remove_button'],
+                create: true,
+                onItemAdd:function(){
+                  this.setTextboxValue('');
+                  this.refreshOptions();
+                },
+                render:{
+                  option:function(data,escape){
+                    return '<div class="d-flex"><span>' + escape(data.value) + '</span><span class="ms-auto text-muted">' + escape(data.date) + '</span></div>';
+                  },
+                  item:function(data,escape){
+                    return '<div>' + escape(data.value) + '</div>';
+                  }
+                }
+              });
+            </script>
+
+          </div>
+
+
+      <!--Select Forms-->
+      <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
+        <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Select Form</div>
+
+        <!--Custom Form-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.7.1/cdn.js" defer ></script>
+
+        <select id="select2" name="select2[]" class="hidden" multiple>
+            <option value="Positions">Position</option>
+            <option value="Position-1" selected>First</option>
+            <option value="Position-2" selected>Second</option>
+            <option value="Position-3" selected>Third</option>
+
+            <option value="ID">ID</option>
+            <option value="ID-1" selected >123</option>
+            <option value="ID-2" selected>456</option>
+            <option value="ID-3" selected>789</option>
+        </select>
+        
+        <div class="relative flex" x-data="{ ...selectMultiple('select2') }">
+        
+            <!-- Selected -->
+            <div class="flex flex-wrap rounded-xl shadow-lg bg-slate-200 dark:bg-neutral-600"
+                @click="isOpen = true;"
+                @keydown.arrow-down.prevent="if(dropdown.length > 0) document.getElementById(elSelect.id+'_'+dropdown[0].index).focus();">
+        
+                <template x-for="(option,index) in selected;" :key="option.value">
+                    <p class="m-1 mb-1 self-center p-2.5 text-xs text-gray-200 whitespace-nowrap rounded-xl bg-blue-400 hover:bg-blue-500 cursor-pointer"
+                      x-text="option.text"
+                      @click="toggle(option)">
+                    </p>
+                </template>
+        
+                <input type="text" placeholder="Select Options" class="m-1 p-2 rounded-xl h-10 bg-slate-200 dark:bg-neutral-600 text-gray-600 dark:text-white"
+                    x-model="term"
+                    x-ref="input" />
+            </div>
+        
+            <!-- Dropdown -->
+            <div class="absolute mt-12 z-40 rounded-xl w-full border dark:border-neutral-600 bg-slate-100 dark:bg-neutral-700"
+                x-show="isOpen"
+                @mousedown.away="isOpen = false">
+        
+                <template x-for="(option,index) in dropdown" :key="option.value">
+                    <div class="cursor-pointer rounded-xl hover:bg-blue-400 focus:bg-blue-500 text-gray-600 dark:text-white"
+                        :class="(term.length > 0 && !option.text.toLowerCase().includes(term.toLowerCase())) && 'hidden';"
+                        x-init="$el.id = elSelect.id + '_' + option.index; $el.tabIndex = option.index;"
+                        @click="toggle(option)"
+                        @keydown.enter.prevent="toggle(option);"
+                        @keydown.arrow-up.prevent="if ($el.previousElementSibling != null) $el.previousElementSibling.focus();"
+                        @keydown.arrow-down.prevent="if ($el.nextElementSibling != null) $el.nextElementSibling.focus();">
+        
+                        <p class="p-2"
+                           x-text="option.text">
+                        </p>
+                    </div>
+                </template>
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener('alpine:init', () => {
+                Alpine.data('selectMultiple', (elSelectId) => ({
+        
+                    elSelect: document.getElementById(elSelectId),
+                    isOpen: false,
+                    term: '',
+        
+                    selected: [],
+                    dropdown: [],
+        
+                    // in the <select> element, set the attributes :
+                    //  "multiple" to avoid to Always set "selected" to the first item
+                    //  class="hidden" (better than hide it with javascript which has a slow reaction)
+                    init()
+                    {
+                        for(var index=0; index < this.elSelect.options.length; index++)
+                        {
+                            if (this.elSelect.options[index].selected)
+                                this.selected.push(this.elSelect.options[index]);
+                            else
+                                this.dropdown.push(this.elSelect.options[index]);
+                        }
+                    },
+        
+                    toggle(option)
+                    {
+                        var property1 = (option.selected == true) ? 'dropdown' : 'selected';
+                        var property2 = (option.selected == true) ? 'selected' : 'dropdown';
+        
+                        option.selected = !option.selected;
+        
+                        // add
+                        this[property1].push(option);
+        
+                        // remove
+                        this[property2] = this[property2].filter((opt, index)=>{
+                            return opt.value != option.value;
+                        });
+                        
+                        // reorder this.dropdown to their original select.options indexes
+                        if (property1 == 'dropdown')
+                            this.dropdown.sort((opt1, opt2) => (opt1.index > opt2.index) ? 1 : -1)
+        
+                        // after adding, re-focus the input
+                        if (option.selected)
+                            this.$refs.input.focus();
+                    },
+                }))
+            });
+        </script>
+      </div>
+
+      <!--Log In Forms-->
+      <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
+        <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Log In Form</div>
 
           <!--Log In form-->
-          <form class="bg-white dark:bg-neutral-700 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <form class="bg-slate-200 dark:bg-neutral-700 shadow-lg rounded-xl px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
               <label class="block text-gray-500 dark:text-gray-300 text-lg font-bold mb-2" for="username">
                 Username
               </label>
-              <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="place for your name">
+              <input class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="username">
             </div>
             <div class="mb-6">
               <label class="block text-gray-500 dark:text-gray-300 text-lg font-bold mb-2" for="password">
                 Password
               </label>
-              <input class="appearance-none border-b-2 border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="************">
+              <input class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="************">
             </div>
             <div class="flex items-center justify-between">
               <button class="bg-blue-400 hover:bblue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
@@ -50,9 +207,8 @@
             </div>
           </form>
 
-          </div>
-
       </div>
+
     </div>
   </div>
     
