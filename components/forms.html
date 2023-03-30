@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
-  <!--Fot Tom Select-->
+  <!--For Tom Select-->
   <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
 </head>
@@ -23,12 +23,77 @@
   <div class="bg-white dark:bg-neutral-900 flex items-center justify-center py-6 mx-4 my-2">
     <div class="container">
 
+
+
+
+
+
+          
+
+
+      <!--Input Forms-->
+      <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
+        <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Input Form</div>
+
+            <!--Input-->
+            <div class="mb-6">
+              <label class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Large input</label>
+              <input type="text" class="block w-full p-4 text-gray-900 border border-gray-300 rounded-xl bg-slate-200 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+            <div class="mb-6">
+              <label class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Default input</label>
+              <input type="text" class="bg-slate-200 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+            <div>
+              <label class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Small input</label>
+              <input type="text" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-xl bg-slate-200 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+
+
+            <!--@ Input-->
+            <div class="block mb-2 text-md font-medium text-gray-900 dark:text-white mt-3">Username</div>
+            <div class="flex">
+              <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-slate-100 border border-r-0 border-gray-300 rounded-l-xl dark:bg-neutral-600 dark:text-gray-400 dark:border-gray-600">
+                @
+              </span>
+              <input type="text"
+              class="rounded-none rounded-r-xl bg-slate-200 border border-neutral-300 text-gray-900 focus:ring-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5
+              dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nowachrono">
+            </div>
+
+
+            <!--Email Input-->
+            <div class="block mb-2 text-md font-medium text-gray-900 dark:text-white mt-3">Email</div>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+              </div>
+              <input type="text" class="bg-slate-200 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="mail@domain">
+            </div>
+            
+
+            <!--Correct and Incorect Input-->
+            <div class="mt-3 mb-6">
+              <div class="block mb-2 text-md font-medium text-green-400">Name</div>
+              <input type="text" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" placeholder="Your name">
+              <p class="mt-2 text-sm text-green-400 font-medium">Correct</p>
+            </div>
+            <div>
+              <div class="block mb-2 text-md font-medium text-red-400">Name</div>
+              <input type="text" class="bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400" placeholder="Your name">
+              <p class="mt-2 text-sm text-red-600 dark:text-red-400 font-medium">Incorrect</p>
+            </div>
+
+          </div>
+
+
       <!--Search Forms-->
       <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
         <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Search Form</div>
 
             <!--Tom Select Form-->
-            <div class="p-0 bg-black">	<select id="select-tags" multiple data-placeholder="Best movies and TV shows" class="form-control">
+            <div class="p-0 bg-black">	
+              <select id="select-tags" multiple data-placeholder="Best movies and TV shows" class="form-control">
               <optgroup label="Name">
                 <option value="Lorem Ipsum" data-date="1">Position 1</option>
                 <option value="Some Text" data-date="2" selected>Position 2</option>
@@ -43,25 +108,6 @@
               </optgroup>
             </select>
             </div>
-
-            <script>
-              new TomSelect("#select-tags",{
-                plugins: ['remove_button'],
-                create: true,
-                onItemAdd:function(){
-                  this.setTextboxValue('');
-                  this.refreshOptions();
-                },
-                render:{
-                  option:function(data,escape){
-                    return '<div class="d-flex"><span>' + escape(data.value) + '</span><span class="ms-auto text-muted">' + escape(data.date) + '</span></div>';
-                  },
-                  item:function(data,escape){
-                    return '<div>' + escape(data.value) + '</div>';
-                  }
-                }
-              });
-            </script>
 
           </div>
 
@@ -126,57 +172,7 @@
             </div>
         </div>
         
-        <script>
-            document.addEventListener('alpine:init', () => {
-                Alpine.data('selectMultiple', (elSelectId) => ({
-        
-                    elSelect: document.getElementById(elSelectId),
-                    isOpen: false,
-                    term: '',
-        
-                    selected: [],
-                    dropdown: [],
-        
-                    // in the <select> element, set the attributes :
-                    //  "multiple" to avoid to Always set "selected" to the first item
-                    //  class="hidden" (better than hide it with javascript which has a slow reaction)
-                    init()
-                    {
-                        for(var index=0; index < this.elSelect.options.length; index++)
-                        {
-                            if (this.elSelect.options[index].selected)
-                                this.selected.push(this.elSelect.options[index]);
-                            else
-                                this.dropdown.push(this.elSelect.options[index]);
-                        }
-                    },
-        
-                    toggle(option)
-                    {
-                        var property1 = (option.selected == true) ? 'dropdown' : 'selected';
-                        var property2 = (option.selected == true) ? 'selected' : 'dropdown';
-        
-                        option.selected = !option.selected;
-        
-                        // add
-                        this[property1].push(option);
-        
-                        // remove
-                        this[property2] = this[property2].filter((opt, index)=>{
-                            return opt.value != option.value;
-                        });
-                        
-                        // reorder this.dropdown to their original select.options indexes
-                        if (property1 == 'dropdown')
-                            this.dropdown.sort((opt1, opt2) => (opt1.index > opt2.index) ? 1 : -1)
-        
-                        // after adding, re-focus the input
-                        if (option.selected)
-                            this.$refs.input.focus();
-                    },
-                }))
-            });
-        </script>
+
       </div>
 
       <!--Log In Forms-->
@@ -213,10 +209,27 @@
   </div>
     
 
+    <!--Empty Modal-->
+    <!--Overlay element-->
+    <div id="overlayEmpty" class="fixed hidden z-40 w-full h-full inset-0 backdrop-blur-md bg-opacity-60"></div>
+
+    <!--Modal Body-->
+    <div id="modalEmpty" class="text-center z-50 fixed hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-100 dark:bg-neutral-800 rounded-xl px-5 py-5 space-y-5 drop-shadow-lg">
+    <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
+    <p class="text-sm text-gray-500 px-8">
+        There is nothing here yet...
+    </p>
+    <button id="closeEmpty"
+        class="bg-gray-500 px-5 py-2 text-sm shadow-lg font-medium tracking-wider text-white rounded-xl">
+        Cancel
+    </button>
+
+    </div>
+
+
 
   <!--Footer Navigation Bar-->
-  <div class="w-full h-screen">
-    <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 shadow rounded-xl mx-3 my-2 backdrop-blur-lg">
+    <div id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 shadow rounded-xl mx-3 my-2 backdrop-blur-lg">
       <div id="tabs" class="flex justify-between">
         <!--Wigets-->
         <a href="../index-components.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
@@ -237,7 +250,7 @@
         </a>
 
         <!--Theme Modal Window-->
-        <a href="#" @click="modelOpen =!modelOpen"
+        <a href="#" id="openEmpty"
         class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
           <ion-icon name="contrast-sharp"></ion-icon>
           <span class="tab tab-theme block text-xs">Theme</span>
@@ -249,11 +262,13 @@
           <span class="tab tab-search block text-xs">Search</span>
         </a>
       </div>
-    </section>
-  </div>
+    </div>
+
 
   <!--IONICONS-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/modals.js"></script>
 </body>
 </html>

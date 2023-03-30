@@ -19,228 +19,155 @@
     <h1 class="text-xs ml-4 mt-3 font-bold text-gray-700 dark:text-gray-400">OVERVIEW</h1>
     <h1 class="text-4xl ml-4 mt-0 font-bold dark:text-white ">Modal</h1>
 
-    <!--Modals-->
-    <div class="min-w-screen min-h-screen bg-white dark:bg-neutral-900 flex items-center justify-center py-6 mx-4 my-2 top-2">
-        <div class="container">
+    <!--Modals overview-->
+    <div class=" bg-white dark:bg-neutral-900 py-6 mx-4 my-2">
 
-        <!--Basic Modal-->
+        <!--Modals card-->
         <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
-            <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Empty Modal</div>
-
-            <!--Bottom Modal-->
-            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-                <div id="themeModal">
-                    <div x-data="{ modelOpen: false }">
-                        <button @click="modelOpen =!modelOpen" class="flex items-center justify-center px-3 py-2 space-x-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 rounded-md">
-                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                            </svg>
-                            <span>modal</span>
-                        </button>
-                        
-                        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-                            <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
-                                <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0" 
-                                    x-transition:enter-end="opacity-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100" 
-                                    x-transition:leave-end="opacity-0"
-                                    class="fixed inset-0 transition-opacity bg-opacity-40 backdrop-blur-md" aria-hidden="true">
-                                </div>
-                        
-                                <div x-cloak x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-                                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
-                                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full p-8 my-32 overflow-hidden text-left transition-all transform bg-slate-200 dark:bg-neutral-800 rounded-xl shadow-lg"
-                                    >
-                                        <div class="flex items-center justify-between space-x-4">
-                                            <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
-                                            <!--Button for Close Modal Window-->
-                                            <button @click="modelOpen = false" class="text-gray-600 focus:outline-none hover:text-gray-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </button>
-                                        </div>  
-                                        
-                                </div>            
-                            </div>
-                        </div>
-                            
-                    </div>
+            <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Modal</div>
+                
+            
+                <!--Empty Modal-->
+                <button id="openEmpty" class="px-5 py-2 bg-gray-500 hover:bg-gray-700 text-white cursor-pointer rounded-md mt-3 font-bold">
+                    Empty Modal
+                </button>
+    
+                <!--Overlay element-->
+                <div id="overlayEmpty" class="fixed hidden z-40 w-full h-full inset-0 backdrop-blur-md bg-opacity-60"></div>
+    
+                <!--Modal Body-->
+                <div id="modalEmpty" class="text-center z-50 fixed hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-100 dark:bg-neutral-800 rounded-xl px-5 py-5 space-y-5 drop-shadow-lg">
+                <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
+                <p class="text-sm text-gray-500 px-8">
+                    There is nothing here yet...
+                </p>
+                <button id="closeEmpty"
+                    class="bg-gray-500 px-5 py-2 text-sm shadow-lg font-medium tracking-wider text-white rounded-xl">
+                    Cancel
+                </button>
+       
                 </div>
-            </div>
 
 
-        <!--Attention Modal-->
-        <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
-            <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Attention Modal</div>
+                <!--Success Modal-->
+                <button id="openSuccess" class="px-5 py-2 bg-green-500 hover:bg-green-700 text-white cursor-pointer rounded-md my-3 font-bold">
+                Success Modal
+                </button>
 
-          <!--Attention Modal-->
-            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-                <div id="themeModal">
-                    <div x-data="{ modelOpen: false }">
-                        <button @click="modelOpen =!modelOpen" class="flex items-center justify-center px-3 py-2 space-x-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 rounded-md">
-                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                            </svg>
-                            <span>modal</span>
-                        </button>
-                        
-                        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-                            <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
-                                <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0" 
-                                    x-transition:enter-end="opacity-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100" 
-                                    x-transition:leave-end="opacity-0"
-                                    class="fixed inset-0 transition-opacity bg-opacity-40 backdrop-blur-md" aria-hidden="true">
-                                </div>
-                        
-                                <div x-cloak x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-                                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
-                                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full max-w-xl p-8 my-32 overflow-hidden text-left transition-all transform bg-slate-200 dark:bg-neutral-800 rounded-xl shadow-lg"
-                                    >
-                                        <!--Modal Header-->
-                                        <div class="flex items-center justify-between space-x-4">
-                                            <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
+                <!--Overlay element-->
+                <div id="overlaySuccess" class="fixed hidden z-40 w-full h-full inset-0 backdrop-blur-md bg-opacity-60"></div>
 
-                                            <!--Button for Close Modal Window-->
-                                            <button @click="modelOpen = false" class="text-gray-600 focus:outline-none hover:text-gray-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </button>
-                                        </div>  
+                <!--Modal Body-->
+                <div id="modalSuccess" class="text-center z-50 fixed hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-100 dark:bg-neutral-800 rounded-xl px-5 py-5 space-y-5 drop-shadow-lg border-t-4 border-green-500">
 
-                                        <!--Modal Body-->
-                                        <div class="text-center p-5 flex-auto justify-center">
+                <svg width="70px" height="70px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#1eff00" stroke="#1eff00" class="flex items-center">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <path fill="#22c55e" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm-55.808 536.384-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.272 38.272 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336L456.192 600.384z"></path></g>
+                </svg>
 
-                                            <svg fill="#ff0000" height="70px" width="70px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" class="flex items-center"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 246.027 246.027" xml:space="preserve" stroke="#ff0000">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                            <path d="M242.751,196.508L143.937,25.358c-4.367-7.564-12.189-12.081-20.924-12.081c-8.735,0-16.557,4.516-20.924,12.081 L3.276,196.508c-4.368,7.564-4.368,16.596,0,24.161s12.189,12.081,20.924,12.081h197.629c8.734,0,16.556-4.516,20.923-12.08 C247.119,213.105,247.118,204.073,242.751,196.508z M123.014,204.906c-8.672,0-15.727-7.055-15.727-15.727 c0-8.671,7.055-15.726,15.727-15.726s15.727,7.055,15.727,15.726C138.74,197.852,131.685,204.906,123.014,204.906z M138.847,137.68 c0,8.73-7.103,15.833-15.833,15.833s-15.833-7.103-15.833-15.833V65.013c0-4.142,3.358-7.5,7.5-7.5h16.667 c4.143,0,7.5,3.358,7.5,7.5V137.68z"></path> </g>
-                                            </svg>
-
-                                            <h2 class="text-2xl font-bold py-4 dark:text-white">Attention</h3>
-                                            <p class="text-sm text-gray-500 px-8">
-                                                Do you really want to delete your account?
-                                                This process cannot be undone
-                                            </p>    
-                                        </div>
-
-                                        <!--Modal Footer-->
-                                        <div class="p-3  mt-2 text-center space-x-4 md:block">
-                                            <button @click="modelOpen = false"
-                                                class="mb-2 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-xl hover:shadow-lg hover:bg-gray-100">
-                                                Cancel
-                                            </button>
-                                            <button @click="modelOpen = false"
-                                                class="mb-2 bg-red-500 px-5 py-2 text-sm shadow-lg font-medium tracking-wider text-white rounded-xl">
-                                                Delete
-                                            </button>
-                                        </div>
-
-                                </div>            
-                            </div>
-                        </div>
-                            
-                    </div>
+                <h2 class="text-2xl font-bold py-2 dark:text-white">Success</h3>
+                <p class="text-sm text-gray-500 px-8">
+                    This modal window indicates that everything went success.
+                    Yay!
+                </p>
+                <button id="closeSuccess"
+                    class="bg-green-500 px-5 py-2 text-sm shadow-lg font-medium tracking-wider text-white rounded-xl">
+                    Confirm
+                </button>
+   
                 </div>
-            </div>  
 
 
-        <!--Success Modal-->
-        <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
-            <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Success Modal</div>
-
-          <!--Success Modal-->
-            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-                <div id="themeModal">
-                    <div x-data="{ modelOpen: false }">
-                        <button @click="modelOpen =!modelOpen" class="flex items-center justify-center px-3 py-2 space-x-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-400 rounded-md">
-                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                            </svg>
-                            <span>modal</span>
-                        </button>
-                        
-                        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto inset-x-3" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-                            <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
-                                <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0" 
-                                    x-transition:enter-end="opacity-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100" 
-                                    x-transition:leave-end="opacity-0"
-                                    class="fixed inset-0 transition-opacity bg-opacity-40 backdrop-blur-md" aria-hidden="true">
-                                </div>
-                        
-                                <div x-cloak x-show="modelOpen" 
-                                    x-transition:enter="transition ease-out duration-300 transform"
-                                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-                                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                                    x-transition:leave="transition ease-in duration-200 transform"
-                                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
-                                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                                    class="inline-block w-full max-w-xl p-8 my-32 overflow-hidden text-left transition-all transform bg-slate-200 dark:bg-neutral-800 rounded-xl shadow-lg"
-                                    >
-                                        <!--Modal Header-->
-                                        <div class="flex items-center justify-between space-x-4">
-                                            <h1 class="text-2xl font-medium text-gray-600 dark:text-gray-400 ">Modal</h1>
-
-                                            <!--Button for Close Modal Window-->
-                                            <button @click="modelOpen = false" class="text-gray-600 focus:outline-none hover:text-gray-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </button>
-                                        </div>  
-
-                                        <!--Modal Body-->
-                                        <div class="text-center p-5 flex-auto justify-center">
-
-                                            <svg width="70px" height="70px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#1eff00" stroke="#1eff00" class="flex items-center">
-                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                                                <path fill="#00ff2a" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm-55.808 536.384-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.272 38.272 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336L456.192 600.384z"></path></g>
-                                            </svg>
-
-                                            <h2 class="text-2xl font-bold py-4 dark:text-white">Success</h3>
-                                            <p class="text-sm text-gray-500 px-8">
-                                                This modal window indicates that everything went success.
-                                                Yay!
-                                            </p>    
-                                        </div>
-
-                                        <!--Modal Footer-->
-                                        <div class="p-3 mt-2 text-center space-x-4 md:block">
-                                            <button @click="modelOpen = false"
-                                                class="mb-2 bg-green-500 px-5 py-2 text-sm shadow-lg font-medium tracking-wider text-white rounded-xl">
-                                                Confirm
-                                            </button>
-                                        </div>
-
-                                </div>            
-                            </div>
-                        </div>
-                            
-                    </div>
+                <!--Info Modal-->
+                <button id="openInfo" class="px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white cursor-pointer rounded-md font-bold">
+                    Info Modal
+                </button>
+    
+                <!--Overlay element-->
+                <div id="overlayInfo" class="fixed hidden z-40 w-full h-full inset-0 backdrop-blur-md bg-opacity-60"></div>
+    
+                <!--Modal Body-->
+                <div id="modalInfo" class="text-center z-50 fixed hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-100 dark:bg-neutral-800 rounded-xl px-5 py-5 space-y-5 drop-shadow-lg border-t-4 border-blue-500">
+    
+                    <svg width="70px" height="70px" viewBox="0 0 24 24" fill="#1eff00" xmlns="http://www.w3.org/2000/svg" stroke="#1eff00" class="flex items-center">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                        <g id="Warning / Info">
+                        <path fill="#3b82f6" id="Vector" d="M12 11V16M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12.0498 8V8.1L11.9502 8.1002V8H12.0498Z" stroke="#0008ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g>
+                    </svg>
+    
+                <h2 class="text-2xl font-bold py-2 dark:text-white">Information</h3>
+                <p class="text-sm text-gray-500 px-8">
+                    This window contains some information
+                </p>
+                <button id="closeInfo"
+                    class="bg-blue-500 px-5 py-2 text-sm shadow-lg font-bold tracking-wider text-white rounded-md">
+                    Got It!
+                </button>
+       
                 </div>
-            </div>  
 
+
+                <!--Form Modal-->
+                <!--This button is used to open the dialog-->
+                <button id="openDanger" class="px-5 py-2 bg-red-500 hover:bg-red-700 text-white cursor-pointer rounded-md mt-3 font-bold">
+                    Danger Modal
+                </button>
+    
+                <!--Overlay element-->
+                <div id="overlayDanger" class="fixed hidden z-40 w-full h-full inset-0 backdrop-blur-md bg-opacity-60"></div>
+    
+                <!--Modal Body-->
+                <div id="modalDanger" class="text-center z-50 fixed hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-100 dark:bg-neutral-800 rounded-xl px-5 py-5 space-y-5 drop-shadow-lg border-t-4 border-red-500">
+    
+                    <svg width="70px" height="70px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000" class="flex items-center">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                        <path d="M12 9V14" stroke="#ff0000" stroke-width="1.9919999999999998" stroke-linecap="round" stroke-linejoin="round"></path> 
+                        <path d="M12.0001 21.41H5.94005C2.47005 21.41 1.02005 18.93 2.70005 15.9L5.82006 10.28L8.76006 5.00003C10.5401 1.79003 13.4601 1.79003 15.2401 5.00003L18.1801 10.29L21.3001 15.91C22.9801 18.94 21.5201 21.42 18.0601 21.42H12.0001V21.41Z" stroke="#ff0000" stroke-width="1.9919999999999998" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11.9945 17H12.0035" stroke="#ff0000" stroke-width="1.9919999999999998" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                    </svg>
+    
+                <h2 class="text-2xl font-bold py-2 dark:text-white">Danger Modal</h3>
+                <p class="text-sm text-gray-500 px-8">
+                    Oh, I think you are doing something dangerous
+                </p>
+                <button id="closeDanger"
+                    class="bg-red-500 px-5 py-2 text-sm font-bold shadow-lg tracking-wider text-white rounded-md">
+                    Go Back
+                </button>
+
+                </div>
+
+                <!--Form Modal-->
+                <!--This button is used to open the dialog-->
+                <button id="openForm" class="px-5 py-2 bg-purple-500 hover:bg-purple-700 text-white cursor-pointer rounded-md mt-3 font-bold">
+                    Form Modal
+                </button>
+    
+                <!--Overlay element-->
+                <div id="overlayForm" class="fixed hidden z-40 w-full h-full inset-0 backdrop-blur-md bg-opacity-60"></div>
+    
+                <!--Modal Body-->
+                <div id="modalForm" class="text-center z-50 fixed hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-100 dark:bg-neutral-800 rounded-xl px-5 py-5 space-y-5 drop-shadow-lg border-t-4 border-red-500">
+    
+                    <svg width="70px" height="70px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000" class="flex items-center">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                        <path d="M12 9V14" stroke="#ff0000" stroke-width="1.9919999999999998" stroke-linecap="round" stroke-linejoin="round"></path> 
+                        <path d="M12.0001 21.41H5.94005C2.47005 21.41 1.02005 18.93 2.70005 15.9L5.82006 10.28L8.76006 5.00003C10.5401 1.79003 13.4601 1.79003 15.2401 5.00003L18.1801 10.29L21.3001 15.91C22.9801 18.94 21.5201 21.42 18.0601 21.42H12.0001V21.41Z" stroke="#ff0000" stroke-width="1.9919999999999998" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11.9945 17H12.0035" stroke="#ff0000" stroke-width="1.9919999999999998" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                    </svg>
+    
+                <h2 class="text-2xl font-bold py-2 dark:text-white">Danger Modal</h3>
+                <p class="text-sm text-gray-500 px-8">
+                    Oh, I think you are doing something dangerous
+                </p>
+                <button id="closeForm"
+                    class="bg-red-500 px-5 py-2 text-sm font-bold shadow-lg tracking-wider text-white rounded-md">
+                    Go Back
+                </button>
+       
+                </div>
                             
             </div>
             </div>
@@ -250,9 +177,8 @@
   
   
   
-<!--Footer Navigation Bar-->
-<div class="w-full h-screen">
-    <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 shadow rounded-xl mx-3 my-2 backdrop-blur-lg">
+    <!--Bottom Navigation Bar-->
+    <div id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 shadow rounded-xl mx-3 my-2 backdrop-blur-lg">
         <div id="tabs" class="flex justify-between">
             <!--Wigets-->
             <a href="../index-components.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
@@ -273,7 +199,7 @@
             </a>
 
             <!--Theme Modal Window-->
-            <a href="#" @click="modelOpen =!modelOpen"
+            <a href="#" id="openEmpty"
             class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
                 <ion-icon name="contrast-sharp"></ion-icon>
                 <span class="tab tab-theme block text-xs">Theme</span>
@@ -285,12 +211,13 @@
                 <span class="tab tab-search block text-xs">Search</span>
             </a>
         </div>
-    </section>
-</div>
+    </div>
 
-<script src="main.js"></script>
-<!--IONICONS-->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <!--IONICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/modals.js"></script>
 </body>
 </html>
