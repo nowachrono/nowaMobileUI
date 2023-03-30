@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-neutral-900">
+    <!--Page title-->
+    <h1 class="text-xs ml-4 mt-3 font-bold text-gray-700 dark:text-gray-400">OVERVIEW</h1>
+    <h1 class="text-4xl ml-4 mt-0 font-bold dark:text-white">Tables</h1>
+
+    <!--Tables-->
+    <div class="min-w-screen min-h-screen bg-white dark:bg-neutral-900 py-6 mx-4 my-2">
+        <div class="container">
+
+            <!--Simple Tables-->
+            <div class="card bg-slate-100 dark:bg-neutral-800 py-3 px-5 rounded-xl flex flex-col mb-5">
+                <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Simple Table</div>
+
+                    <!--Simple Customer Table-->
+                    <div class="relative overflow-x-auto rounded-xl">
+                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                            <thead class="text-xs text-gray-700 uppercase bg-slate-200 dark:bg-neutral-900 dark:text-gray-300">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        Customer name
+                                    </th>
+
+                                    <th scope="col" class="px-6 py-3">
+                                        Status
+                                    </th>
+
+                                    <th scope="col" class="px-6 py-3">
+                                        Role
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b dark:bg-neutral-700 dark:border-neutral-600">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Julius Nowachrono
+                                    </th>
+
+                                    <td class="px-6 py-4 text-yellow-300">
+                                        Sleep
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        Admin
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b dark:bg-neutral-700 dark:border-neutral-600">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Julius Nowachrono
+                                    </th>
+
+                                    <td class="px-6 py-4 text-green-300">
+                                        Online
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        Admin
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white dark:bg-neutral-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Julius Nowachrono
+                                    </th>
+
+                                    <td class="px-6 py-4 text">
+                                        Offline
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        Admin
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            <!--Full Table-->
+                <div class="bg-slate-100 dark:bg-[#282828] py-3 px-5 rounded-xl flex flex-col mb-5">
+                    <div class="title text-2xl font-bold mb-3 text-gray-800 dark:text-white">Full Table</div>
+
+                    <!--Full Table-->
+                    <section class="container">
+                        <div class="sm:flex sm:items-center sm:justify-between">
+
+                            <div class="flex items-center mt-4 gap-x-3">
+                                <button class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text--700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-[#282828] hover:bg-gray-100 dark:text-gray-200 dark:border-[#323232]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_3098_154395)">
+                                        <path d="M13.3333 13.3332L9.99997 9.9999M9.99997 9.9999L6.66663 13.3332M9.99997 9.9999V17.4999M16.9916 15.3249C17.8044 14.8818 18.4465 14.1806 18.8165 13.3321C19.1866 12.4835 19.2635 11.5359 19.0351 10.6388C18.8068 9.7417 18.2862 8.94616 17.5555 8.37778C16.8248 7.80939 15.9257 7.50052 15 7.4999H13.95C13.6977 6.52427 13.2276 5.61852 12.5749 4.85073C11.9222 4.08295 11.104 3.47311 10.1817 3.06708C9.25943 2.66104 8.25709 2.46937 7.25006 2.50647C6.24304 2.54358 5.25752 2.80849 4.36761 3.28129C3.47771 3.7541 2.70656 4.42249 2.11215 5.23622C1.51774 6.04996 1.11554 6.98785 0.935783 7.9794C0.756025 8.97095 0.803388 9.99035 1.07431 10.961C1.34523 11.9316 1.83267 12.8281 2.49997 13.5832" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_3098_154395">
+                                        <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <span>Import</span>
+                                </button>
+
+                                <button class="flex items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-blue-500 dark:hover:bg-blue-500 dark:bg-blue-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                            <div class="relative flex items-center mt-4">
+                                <span class="absolute">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mx-3 text-gray-400 dark:text-gray-600">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                    </svg>
+                                </span>
+
+                                <input type="text" placeholder="Search" class="block w-full py-1.5 pr-5 text-red-700 bg-[#242424] border border-[#323232] rounded-lg  placeholder-gray-400/70 pl-11 rtl:pr-11 rtl:pl-5 dark:bg-[#242424] dark:text-gray-300 dark:border-[#323232] focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
+                            </div>
+
+
+                        <div class="flex flex-col mt-3 ">
+                            <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                                    <div class="overflow-hidden border border-gray-200 dark:border-[#323232] rounded-xl">
+                                        <table class="min-w-full divide-y divide-gray-200 dark:divide-[#202020]">
+                                            <thead class="bg-slate-200 dark:bg-[#282828]">
+                                                <tr>
+                                                    <th scope="col" class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                                        <button class="flex items-center gap-x-3 focus:outline-none">
+                                                            <span>Company</span>
+                                                        </button>
+                                                    </th>
+
+                                                    <th scope="col" class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                                        Status
+                                                    </th>
+
+                                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                                        About
+                                                    </th>
+
+                                                    <th scope="col" class="relative py-3.5 px-4">
+                                                        <span class="sr-only">Edit</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="bg-white divide-y divide-gray-200 dark:divide-[#323232] dark:bg-[#242424]">
+                                                <tr>
+                                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div>
+                                                            <h2 class="font-medium text-gray-800 dark:text-white ">Company</h2>
+                                                            <p class="text-sm font-normal text-gray-600 dark:text-gray-400">company.com</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div class="inline px-3 py-1 text-sm font-normal rounded-full text-green-500 gap-x-2 bg-emerald-100/60 dark:bg-[#282828]">
+                                                            Online
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <div>
+                                                            <h4 class="text-gray-700 dark:text-gray-200">Lorem ipsum</h4>
+                                                            <p class="text-gray-500 dark:text-gray-400">Lorem ipsum</p>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <button class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                                                            </svg>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div>
+                                                            <h2 class="font-medium text-gray-800 dark:text-white ">Company</h2>
+                                                            <p class="text-sm font-normal text-gray-600 dark:text-gray-400">company.com</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div class="inline px-3 py-1 text-sm font-normal text-gray-500 bg-gray-100 rounded-full dark:text-gray-400 gap-x-2 dark:bg-[#282828]">
+                                                            Offline
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <div>
+                                                            <h4 class="text-gray-700 dark:text-gray-200">Lorem ipsum</h4>
+                                                            <p class="text-gray-500 dark:text-gray-400">Lorem ipsum</p>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <button class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                                                            </svg>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div>
+                                                            <h2 class="font-medium text-gray-800 dark:text-white ">Company</h2>
+                                                            <p class="text-sm font-normal text-gray-600 dark:text-gray-400">company.com</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div class="inline px-3 py-1 text-sm font-normal rounded-full text-green-500 gap-x-2 bg-emerald-100/60 dark:bg-[#242424]">
+                                                            Online
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <div>
+                                                            <h4 class="text-gray-700 dark:text-gray-200">Lorem ipsum</h4>
+                                                            <p class="text-gray-500 dark:text-gray-400">Lorem ipsum</p>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <button class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                                                            </svg>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div>
+                                                            <h2 class="font-medium text-gray-800 dark:text-white ">Company</h2>
+                                                            <p class="text-sm font-normal text-gray-600 dark:text-gray-400">company.com</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div class="inline px-3 py-1 text-sm font-normal text-gray-500 bg-gray-100 rounded-full dark:text-gray-400 gap-x-2 dark:bg-[#282828]">
+                                                            Offline
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <div>
+                                                            <h4 class="text-gray-700 dark:text-gray-200">Lorem ipsum</h4>
+                                                            <p class="text-gray-500 dark:text-gray-400">Lorem ipsum</p>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <button class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                                                            </svg>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div>
+                                                            <h2 class="font-medium text-gray-800 dark:text-white ">Company</h2>
+                                                            <p class="text-sm font-normal text-gray-600 dark:text-gray-400">company.com</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
+                                                        <div class="inline px-3 py-1 text-sm font-normal rounded-full text-green-500 gap-x-2 bg-green-100/60 dark:bg-[#242424]">
+                                                            Online
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <div>
+                                                            <h4 class="text-gray-700 dark:text-gray-200">Lorem ipsum</h4>
+                                                            <p class="text-gray-500 dark:text-gray-400">Lorem ipsum</p>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                                        <button class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                                                            </svg>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 sm:flex sm:items-center sm:justify-between ">
+                            <div class="text-sm text-gray-500 dark:text-gray-400">
+                                Page
+                                <span class="font-medium text-gray-700 dark:text-gray-100">1 of 3</span> 
+                            </div>
+
+                            <div class="flex items-center mt-4 gap-x-4 sm:mt-0">
+                                <a href="#" class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md sm:w-auto gap-x-2 hover:bg-gray-100 dark:bg-[#282828] dark:text-gray-200 dark:border-gray-700 dark:hover:bg-[#242424]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:-scale-x-100">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                                    </svg>
+
+                                    <span>
+                                        Previous
+                                    </span>
+                                </a>
+
+                                <a href="#" class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md sm:w-auto gap-x-2 hover:bg-gray-100 dark:bg-[#242424] dark:text-gray-200 dark:border-gray-700 dark:hover:bg-[#242424]">
+                                    <span>
+                                        Next
+                                    </span>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:-scale-x-100">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>    
+            
+    
+            </div>
+        </div>
+    </div>        
+
+
+
+
+    <div class="w-full h-screen fixed">
+        <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-1000 shadow-lg rounded-xl mx-3 my-2 backdrop-blur-lg">
+            <div id="tabs" class="flex justify-between">
+                <!--Wigets-->
+                <a href="../index-components.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="extension-puzzle"></ion-icon>
+                    <span class="tab tab-wigets block text-xs">Wigets</span>
+                </a>
+    
+                <!--Pages-->
+                <a href="../index-pages.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="book"></ion-icon>
+                    <span class="tab tab-pages block text-xs">Pages</span>
+                </a>
+    
+                <!--Home-->
+                <a href="../index.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="home"></ion-icon>
+                    <span class="tab tab-home block text-xs">Home</span>
+                </a>
+    
+                <!--Theme Modal Window-->
+                <a href="#" @click="modelOpen =!modelOpen"
+                class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="contrast-sharp"></ion-icon>
+                    <span class="tab tab-theme block text-xs">Theme</span>
+                </a>
+    
+                <!--Search-->
+                <a href="../index-search.html" class="w-full text-gray-700 dark:text-gray-100 focus:text-blue-400 hover:text-blue-400 justify-center inline-block text-center pt-2 pb-1">
+                    <ion-icon name="search"></ion-icon>
+                    <span class="tab tab-search block text-xs">Search</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+
+    <!--IONICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
